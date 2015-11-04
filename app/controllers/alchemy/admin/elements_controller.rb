@@ -165,7 +165,7 @@ module Alchemy
       end
 
       def element_params
-        if @element.taggable?
+        if @element && @element.taggable?
           params.fetch(:element, {}).permit(:tag_list)
         else
           params.fetch(:element, {})
