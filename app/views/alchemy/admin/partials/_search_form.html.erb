@@ -1,6 +1,7 @@
 <%- url ||= resource_url_proxy.url_for(action: 'index') -%>
 
-<%= search_form_for @query, url: url, class: 'search_form' do |f| %>
+<% if false %>
+<%= search_form_for @query, format: :firstname_or_lastname_or_login_or_email_cont, url: url, class: 'search_form' do |f| %>
   <div class="search_field">
     <%= render_icon('search') %>
     <%= f.search_field resource_handler.search_field_name,
@@ -19,3 +20,5 @@
     <% end %>
   </div>
 <% end %>
+<% end %>
+
